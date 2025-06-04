@@ -13,7 +13,7 @@ body {
 
 #card {
     height: 60vh;
-    width: 50vw;
+    width: 25vw;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -51,9 +51,13 @@ input::-webkit-inner-spin-button {
     margin: 10px 0;
     background: #585296;
     height: 4vh;
-    width: 10vw;
+    width: 100%;
     border: none;
     border-radius: 10px;
+}
+
+button:hover {
+    color: #fff;
 }
 
 #Currencyflags {

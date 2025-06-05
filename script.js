@@ -22,7 +22,7 @@
 
 
 const convertbutton = document.querySelector('#buttonConvert');
-const inputvalue = document.querySelector('.currencyinput').value;
+const inputvalue = parsefloat(document.querySelector('.currencyinput').value);
 
 function convert(){
     console.log(inputvalue);

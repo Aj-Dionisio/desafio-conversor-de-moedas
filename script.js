@@ -13,7 +13,7 @@
 //     1.2 - CRIE UMA FUNÇÃO QUE IRA GERAR UM CONSOLE.LOG - ok
 //     1.3 - COLOCAR UM addEventListener LIGADO A FUNÇÃO FEITA ANTERIORMENTE - ok
 //     1.4 - PEGAR O VALOR DO INPUT ONDE O VALOR É INSERIDO, ISSO DENTRO DA FUNÇÃO SUBSTITUINDO O CONSOLE.LOG
-    //1.4.1 - mapear o input
+    //1.4.1 - mapear o input - está mapeado mas não apresenta o valor do input
 
 // 2 - PEGAR O VALOR DO INPUT
 //     2.1 - COLOCAR VARIAVEIS NAS MOEDAS
@@ -22,7 +22,7 @@
 
 
 const convertbutton = document.querySelector('#buttonConvert');
-const inputvalue = document.querySelector('.currencyinput').value
+const inputvalue = document.querySelector('.currencyinput').value;
 
 function convert(){
     console.log(inputvalue);
@@ -30,11 +30,3 @@ function convert(){
 
 convertbutton.addEventListener('click',convert);
 
-//const convertbutton = document.querySelector('#buttonConvert');
-
-// function convert() {
-//     const inputvalue = document.querySelector('.currencyinput').value; // Get the value inside the function
-//     console.log(inputvalue);
-// }
-
-// convertbutton.addEventListener('click', convert);

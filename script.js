@@ -22,10 +22,15 @@
 
 
 const convertbutton = document.querySelector('#buttonConvert');
-const inputvalue = parsefloat(document.querySelector('.currencyinput').value);
+
 
 function convert(){
-    console.log(inputvalue);
+    const inputvalue = document.querySelector('.currencyinput').value;
+    
+    const dolarToday = 5.60 // na data de 05/06
+
+    const result = inputvalue/dolarToday;
+    console.log(result);
 }
 
 convertbutton.addEventListener('click',convert);

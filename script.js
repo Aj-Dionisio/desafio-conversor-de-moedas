@@ -26,6 +26,7 @@ const currencyToConvert = document.querySelector('.currencyValueToConvert');
 const currencyTextToConvert = document.querySelector('.currencyTextToConvert');
 const currencyConverted = document.querySelector('.currencyValueConverted')
 const currecyTextConverted = document.querySelector('.currencyTextConverted')
+const currencySelect = document.querySelector('#currencyTo')
 
 function convert() {
     const inputvalue = document.querySelector('.currencyinput').value;

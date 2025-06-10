@@ -13,7 +13,7 @@
 //     1.2 - CRIE UMA FUNÇÃO QUE IRA GERAR UM CONSOLE.LOG - ok
 //     1.3 - COLOCAR UM addEventListener LIGADO A FUNÇÃO FEITA ANTERIORMENTE - ok
 //     1.4 - PEGAR O VALOR DO INPUT ONDE O VALOR É INSERIDO, ISSO DENTRO DA FUNÇÃO SUBSTITUINDO O CONSOLE.LOG
-    //1.4.1 - mapear o input - está mapeado mas não apresenta o valor do input
+//1.4.1 - mapear o input - está mapeado mas não apresenta o valor do input
 
 // 2 - PEGAR O VALOR DO INPUT
 //     2.1 - COLOCAR VARIAVEIS NAS MOEDAS
@@ -22,16 +22,41 @@
 
 
 const convertbutton = document.querySelector('#buttonConvert');
+const currencyToConvert = document.querySelector('.currencyValueToConvert');
+const currencyTextToConvert = document.querySelector('.currencyTextToConvert');
+const currencyConverted = document.querySelector('.currencyValueConverted')
+const currecyTextConverted = document.querySelector('.currencyTextConverted')
 
-
-function convert(){
+function convert() {
     const inputvalue = document.querySelector('.currencyinput').value;
-    
-    const dolarToday = 5.60 // na data de 05/06
 
-    const result = inputvalue/dolarToday;
+
+
+    const dolarToday = 5.60 // na data de 05/06
+    const euroToday = 6.33 // 09/06
+    const ieneToday = 0.038// 09/06
+    const RupiaToday = 0.065//09/06
+    const LibraToday = 7.52//09/06
+    const FrancobelgaToday = 0.15737// 09/06
+    const DollarCToday = 4.05 //09/06
+
+    const result = inputvalue / dolarToday;
     console.log(result);
+
+    currencyToConvert.innerHTML = new Intl.NumberFormat("pt-br", {
+        style: 'currency',
+        currency: 'BRL'
+    }).format(inputvalue);
+
+    currencyConverted.innerHTML = new Intl.NumberFormat("en-us", {
+        style: 'currency',
+        currency: 'USD',
+    }).format(result);
+
+
+
+
 }
 
-convertbutton.addEventListener('click',convert);
+convertbutton.addEventListener('click', convert);
 

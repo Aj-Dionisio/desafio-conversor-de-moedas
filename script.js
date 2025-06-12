@@ -22,14 +22,18 @@
 
 
 const convertbutton = document.querySelector('#buttonConvert');
+const currencySelectFrom= document .querySelector ('#currencyFrom');
+const currencySelectTo= document .querySelector ('#currencyTo');
 const currencyToConvert = document.querySelector('.currencyValueToConvert');
 const currencyTextToConvert = document.querySelector('.currencyTextToConvert');
 const currencyConverted = document.querySelector('.currencyValueConverted')
 const currecyTextConverted = document.querySelector('.currencyTextConverted')
-const currencySelect = document.querySelector('#currencyTo')
+
 
 function convert() {
     const inputvalue = document.querySelector('.currencyinput').value;
+
+    console.log(currencySelectTo.value);
 
 
 
@@ -40,19 +44,39 @@ function convert() {
     const LibraToday = 7.52//09/06
     const FrancobelgaToday = 0.15737// 09/06
     const DollarCToday = 4.05 //09/06
+    // console.log(currencySelect).value;
+    // const result = inputvalue / dolarToday;
+    // console.log(result);
+//mapeando quando o tipo de moeda é selecionada e ulizando o if para quando ocorrer as atividades
 
-    const result = inputvalue / dolarToday;
-    console.log(result);
-
-    currencyToConvert.innerHTML = new Intl.NumberFormat("pt-br", {
-        style: 'currency',
-        currency: 'BRL'
-    }).format(inputvalue);
-
+if (currencySelectTo.value === 'dolar'){
     currencyConverted.innerHTML = new Intl.NumberFormat("en-us", {
         style: 'currency',
         currency: 'USD',
-    }).format(result);
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 2,
+    }).format(inputvalue / dolarToday);
+}
+
+if (currencySelectTo.value === 'Euro'){
+    currencyConverted.innerHTML = new Intl.NumberFormat("de-DE", {
+        style: 'currency',
+        currency: 'EUR',
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 2,
+    }).format(inputvalue / euroToday);
+}
+
+
+//  formatando os valores das moedas
+    currencyToConvert.innerHTML = new Intl.NumberFormat("pt-br", {
+        style: 'currency',
+        currency: 'BRL',
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 2,
+    }).format(inputvalue);
+
+    
 
 
 

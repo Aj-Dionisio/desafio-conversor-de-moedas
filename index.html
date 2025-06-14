@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <img id="" src="" alt=""> <!--colocar imagem aqui, ficará acima do card de converção -->
+    <img class="logo" src="./assets/picture-money.gif" alt="imagem de deinheri voando"> <!--colocar imagem aqui, ficará acima do card de converção -->
     <main id="card">
         <label>Converter <b>de:</b>
             <select name="currencyFrom" id="currencyFrom">
@@ -20,10 +20,9 @@
                 <option value="Iene" class="currencyToConvert">Iene</option>
                 <option value="Rupia" class="currencyToConvert">Rupia Indiana</option>
                 <option value="libra" class="currencyToConvert">Libra Esterlina</option>
-                <option value="Franco" class="currencyToConvert">Franco belga</option>
-                <option value="Lira" class="currencyToConvert">Lira Italiana</option>
                 <option value="Dolar Canadence" class="currencyToConvert">Dolar Canadence</option>
             </select>
+
         </label>
         <label>Converter <b>para:</b>
             <select name="currencyFrom" id="currencyTo">
@@ -33,24 +32,22 @@
                 <option value="Iene" id="currencyToConvert">Iene</option>
                 <option value="Rupia" id="currencyToConvert">Rupia Indiana</option>
                 <option value="libra" id="currencyToConvert">Libra Esterlina</option>
-                <option value="Franco" id="currencyToConvert">Franco belga</option>
-                <option value="Lira" id="currencyToConvert">Lira Italiana</option>
                 <option value="Dolar Canadence" id="currencyToConvert">Dolar Canadence</option>
             </select>
         </label>
-        <input class="currencyinput"    type="number" placeholder="R$ 10.000,00">
+        <input class="currencyinput" type="number" placeholder="R$ 10.000,00">
 
         <button id="buttonConvert">Converter</button>
 
         <section id="Currencyflags">
             <div id="flagFrom" class="flag">
-                <img class="flagImage" src="./Assets/Real.png" alt="Bandeira da moeda a ser convertida">
+                <img class="flagImage" src="./assets/Real.png" alt="Bandeira da moeda a ser convertida">
                 <p class="currencyTextToConvert">Real</p>
                 <p class="currencyValueToConvert">R$ 0,00</p>
             </div>
-            <img id=" arrow" src="./Assets/Arrow.png" alt="Seta indicando a conversão">
+            <img id=" arrow" src="./assets/Arrow.png" alt="Seta indicando a conversão">
             <div id="flagTo" class="flag">
-                <img class="flagImage" src="./Assets/Dollar.png" alt="Bandeira da moeda para a qual será convertida">
+                <img class="flagImage" src="./assets/Dollar.png" alt="Bandeira da moeda para a qual será convertida">
                 <p class="currencyTextConverted">Dólar</p>
                 <p class="currencyValueConverted">US$ 0.00</p>
             </div>

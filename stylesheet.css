@@ -10,7 +10,13 @@
 body {
     background: linear-gradient(to right, #585296, #342d9c);
 }
-
+.logo{
+    width: 30vh;
+    height: 30vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 #card {
     height: 60vh;
     width: 25vw;

@@ -183,6 +183,7 @@ function change() {
     }
     if (currencySelectTo.value === 'Euro') {
         currecyTextConverted.innerHTML = 'Euro'; 
+        imageConverted.src = './assets/Euro'
     }
     if (currencySelectTo.value === 'real') {
         currecyTextConverted.innerHTML = 'Real'; 
@@ -200,7 +201,7 @@ function change() {
         currecyTextConverted.innerHTML = 'Dolar Canadence'; 
     }
 
-
+convert();
 }
 
 

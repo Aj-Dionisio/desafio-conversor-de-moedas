@@ -10,7 +10,8 @@
 </head>
 
 <body>
-    <img class="logo" src="./assets/picture-money.gif" alt="imagem de deinheri voando"> <!--colocar imagem aqui, ficará acima do card de converção -->
+    <img class="logo" src="./assets/picture-money.gif" alt="imagem de deinheri voando">
+    <!--colocar imagem aqui, ficará acima do card de converção -->
     <main id="card">
         <label>Converter <b>de:</b>
             <select name="currencyFrom" id="currencyFrom">
@@ -27,7 +28,7 @@
         <label>Converter <b>para:</b>
             <select name="currencyFrom" id="currencyTo">
                 <option value="real" id="currencyToConvert">Real</option>
-                <option valeu="dolar" id="currencyToConvert">Dólar Americano</option>
+                <option value="dolar" id="currencyToConvert">Dólar Americano</option>
                 <option value="Euro" id="currencyToConvert">Euro</option>
                 <option value="Iene" id="currencyToConvert">Iene</option>
                 <option value="Rupia" id="currencyToConvert">Rupia Indiana</option>
@@ -40,14 +41,14 @@
         <button id="buttonConvert">Converter</button>
 
         <section id="Currencyflags">
-            <div id="flagFrom" class="flag">
-                <img class="flagImage" src="./assets/Real.png" alt="Bandeira da moeda a ser convertida">
+            <div id="flagFrom">
+                <img class="flagFrom" src="./assets/Real.png" alt="Bandeira da moeda a ser convertida">
                 <p class="currencyTextToConvert">Real</p>
                 <p class="currencyValueToConvert">R$ 0,00</p>
             </div>
             <img id=" arrow" src="./assets/Arrow.png" alt="Seta indicando a conversão">
-            <div id="flagTo" class="flag">
-                <img class="flagImage" src="./assets/Dollar.png" alt="Bandeira da moeda para a qual será convertida">
+            <div id="flagTo">
+                <img class="flagTo" src="./assets/Dollar.png" alt="Bandeira da moeda para a qual será convertida">
                 <p class="currencyTextConverted">Dólar</p>
                 <p class="currencyValueConverted">US$ 0.00</p>
             </div>

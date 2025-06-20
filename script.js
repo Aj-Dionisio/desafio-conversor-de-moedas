@@ -5,21 +5,21 @@ const currencyToConvert = document.querySelector('.currencyValueToConvert');
 const currencyTextToConvert = document.querySelector('.currencyTextToConvert');
 const currencyConverted = document.querySelector('.currencyValueConverted');
 const currecyTextConverted = document.querySelector('.currencyTextConverted');
-const imageToConvert = document.querySelector('#flagFrom');
-const imageConverted = document.querySelector('#flagTo');
+const imageToConvert = document.querySelector('.flagFrom');
+const imageConverted = document.querySelector('.flagTo');
 
 
 function convert() {
     const inputvalue = document.querySelector('.currencyinput').value;
 
-    const realToday = 1.00 
-    const dolarToday = 5.60 
-    const euroToday = 6.33 
+    const realToday = 1.00
+    const dolarToday = 5.60
+    const euroToday = 6.33
     const ieneToday = 0.038
     const RupiaToday = 0.065
     const LibraToday = 7.52
-    const DollarCToday = 4.05 
- 
+    const DollarCToday = 4.05
+
     if (currencySelectTo.value === 'dolar') {
         currencyConverted.innerHTML = new Intl.NumberFormat("en-US", {
             style: 'currency',
@@ -148,7 +148,7 @@ function convert() {
     }
 
 }
-
+ 
 function change() {
 
     if (currencySelectFrom.value === 'dolar') {
@@ -156,17 +156,18 @@ function change() {
         imageToConvert.src = './assets/Dollar.png'
     }
     if (currencySelectFrom.value === 'real') {
-        currencyTextToConvert.innerHTML = 'Real';
-        imageToConvert.src = './assets/Real.png'
-        
+        currencyTextToConvert.innerHTML = 'Real'
+        imageToConvert.src = '';
+
     }
     if (currencySelectFrom.value === 'Euro') {
         currencyTextToConvert.innerHTML = 'Euro';
-        imageToConvert.src = './assets/Euro.png'
-         
+        imageToConvert.src = "./assets/Euro.png";
+
     }
     if (currencySelectFrom.value === 'Iene') {
         currencyTextToConvert.innerHTML = 'Iene';
+        imageToConvert.src = "./assets/Euro.png";
     }
     if (currencySelectFrom.value === 'Rupia') {
         currencyTextToConvert.innerHTML = 'Rupia';
@@ -179,29 +180,31 @@ function change() {
     }
 
     if (currencySelectTo.value === 'dolar') {
-        currecyTextConverted.innerHTML = 'Dolar'; 
+        currecyTextConverted.innerHTML = 'Dolar';
+        imageConverted.src='./assets.Dollar.png';
     }
     if (currencySelectTo.value === 'Euro') {
-        currecyTextConverted.innerHTML = 'Euro'; 
-        imageConverted.src = './assets/Euro'
+        currecyTextConverted.innerHTML = 'Euro';
+        imageConverted.src = './assets/Euro.png';
     }
     if (currencySelectTo.value === 'real') {
-        currecyTextConverted.innerHTML = 'Real'; 
+        currecyTextConverted.innerHTML = 'Real';
+        imageConverted.src = './assets/Real.png';
     }
     if (currencySelectTo.value === 'Iene') {
-        currecyTextConverted.innerHTML = 'Iene'; 
+        currecyTextConverted.innerHTML = 'Iene';
     }
     if (currencySelectTo.value === 'Rupia') {
-        currecyTextConverted.innerHTML = 'Rupia'; 
+        currecyTextConverted.innerHTML = 'Rupia';
     }
     if (currencySelectTo.value === 'libra') {
-        currecyTextConverted.innerHTML = 'Libra Esterlina'; 
+        currecyTextConverted.innerHTML = 'Libra Esterlina';
     }
     if (currencySelectTo.value === 'Dolar Canadence') {
-        currecyTextConverted.innerHTML = 'Dolar Canadence'; 
+        currecyTextConverted.innerHTML = 'Dolar Canadence';
     }
 
-convert();
+    convert();
 }
 
 
